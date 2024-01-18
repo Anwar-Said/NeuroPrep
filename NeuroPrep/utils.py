@@ -27,7 +27,7 @@ def parcellation(fmri, n_rois=1000):
         if i != 0:
             bool_roi = np.zeros(volume.shape, dtype=int)
             bool_roi[volume == i] = 1
-            bool_roi = bool_roi.astype(np.bool)
+            bool_roi = bool_roi.astype(bool)
             roi_ts_mean = []
             for t in range(fmri.shape[-1]):
                 roi_ts_mean.append(np.mean(fmri[:, :, :, t][bool_roi]))
