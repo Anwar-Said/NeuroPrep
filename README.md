@@ -29,7 +29,7 @@ $ Read the Docs (https://readthedocs.org)
 We will be using part of our fMRI preprocessing tool, NeuroGraph (https://neurograph.readthedocs.io/en/latest/) that provides a set of tools for downloading, preprocessing and creating graph-based representations and benchmarks. We will use Python programming language. Our project structure is as follows. 
 
 
-![Alt text](structure.png){:height="50%" width="50%"}
+<img src="structure.png" alt="Alt text" width="50%" height="50%">
 
 The utils.py file has the implementation for the fMRI preprocessing. main.py file consider a single example and use the pipeline to preprocess the data. 
 
