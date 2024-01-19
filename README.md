@@ -24,11 +24,39 @@ $ Read the Docs (https://readthedocs.org)
 
 ```
 
-## Develop an fMRI preprocessing pipeline
+## Developing an fMRI preprocessing pipeline
 
 We will be using part of our fMRI preprocessing tool, NeuroGraph (https://neurograph.readthedocs.io/en/latest/) that provides a set of tools for downloading, preprocessing and creating graph-based representations and benchmarks. We will use Python programming language. Our project structure is as follows. 
 
 
 ![Alt text](structure.png)
+
+The utils.py file has the implementation for the fMRI preprocessing. main.py file consider a single example and use the pipeline to preprocess the data. 
+
+## Packaging and publishing Python projects
+
+Publishing packages online offers widespread accessibility, allowing developers and researchers across the globe to easily discover, install, and integrate your software into their projects. To publish our package online, we will use the Python Package Index (PyPI). We will use the setup.py file to configure the package, and then we will use the following terminal commands to create the package. 
+
+
+```
+$ python setup.py sdist bdist_wheel (this command should create the distribution folder (dist))
+$ twine check dist/*   (this check the package and return errors if any) 
+```
+
+Now, to upload the package to PyPI, we create an account on PyPI and obtain the API key. Using the API key, we create a ".pypirc" file and save it in the home folder (~/.pypirc). We can then upload the package to PyPI as follows.
+
+```
+$ twine upload dist/*
+```
+Out Python package is online and is ready to install with
+
+```
+$ pip install NeuroPrep
+```
+## Containerize the Package
+
+
+
+
 
 
